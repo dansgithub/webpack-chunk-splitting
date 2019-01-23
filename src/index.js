@@ -9,13 +9,13 @@ const chunkGenerator = () => {
     }
 };
 
-// load chunk only on an event fired
+// load chunk on click
 const loadOnClick = () => {
     const button = document.getElementsByClassName('button');
-    button[0].addEventListener('click', (e) =>  import('./js/d'));
+    button[0].addEventListener('click', () =>  import('./js/d'));
 };
 
-document.addEventListener('DOMContentLoaded',(e) => {
+document.addEventListener('DOMContentLoaded', () => {
     chunkGenerator();
     loadOnClick();
 });
